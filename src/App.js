@@ -58,13 +58,22 @@ class App extends Component {
         });
     }
 
+    _handleRemove = (id) => {
+        const { todos } =  this.state;
+
+        this.setState({
+            todos: todos.filter(todo => todo.id !== id)
+        });
+    }
+
     render() {
         const { input, todos } = this.state;
         const {
             _handleChange,
             _handleCreate,
             _handleKeyPress,
-            _handleToggle
+            _handleToggle,
+            _handleRemove
         } = this;
 
         return (
@@ -77,7 +86,7 @@ class App extends Component {
                         onCreate={_handleCreate}
                     />
                 )}>
-                    <TodoItemList todos={todos} onToggle={_handleToggle} />
+                    <TodoItemList todos={todos} onToggle={_handleToggle} onRemove={_handleRemove} />
                 </TodoListTemplate>
             </div>
         );
