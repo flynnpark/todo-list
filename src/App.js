@@ -40,7 +40,7 @@ class App extends Component {
     }
 
     render() {
-        const { input } = this.state;
+        const { input, todos } = this.state;
         const {
             _handleChange,
             _handleCreate,
@@ -57,7 +57,7 @@ class App extends Component {
                         onCreate={_handleCreate}
                     />
                 )}>
-                    <TodoItemList />
+                    <TodoItemList todos={todos} />
                 </TodoListTemplate>
             </div>
         );
