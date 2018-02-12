@@ -15,7 +15,7 @@
         "predeploy": "npm run build",
         "deploy": "gh-pages -d build"
     },
-    "homepage": "http://wphestiraid.github.io/todo-list",
+    "homepage": "http://wphestiraid.github.io/todo-list/",
     "devDependencies": {
         "gh-pages": "^1.1.0"
     }
